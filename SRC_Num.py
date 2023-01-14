@@ -21,16 +21,26 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(data)
 
+    def in_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.in_order_traversal()
 
+        elements.append(self.data)
+
+        if self.right:
+            elements += self.right.in_order_traversal()
+
+        return elements
 
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
-
     for i in range(1,len(elements)):
         root.add_child(elements[i])
 
     return root
+    
 if __name__ == '__main__':
     numbers= [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree= build_tree(numbers)
-    print (numbers_tree)
+    print (numbers_tree.in_order_traversal())
