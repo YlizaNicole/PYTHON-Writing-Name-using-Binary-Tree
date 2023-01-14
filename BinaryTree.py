@@ -1,12 +1,9 @@
 # https://www.youtube.com/watch?v=lFq5mYUWEBk as guide
 
-
 Menu= print("========MENU========")
 print ("| [1] = Search      |")
 print ("| [2] = Exit        |")
 print("====================")
-
-
 
 while True:
     print()
@@ -70,8 +67,9 @@ while True:
             Uppercased = User_Input.upper()
             print("in the list? ", FullName_tree.search(Uppercased))
 
+
     if user_input==2:
         question= input("exit? (y/n)")
         if question == "y":
             print("bye bye :>")
-        break
+            break
