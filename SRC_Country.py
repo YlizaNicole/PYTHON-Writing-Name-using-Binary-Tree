@@ -64,3 +64,5 @@ if __name__ == '__main__':
     countries = ["India","Pakistan","Germany", "USA","China","India","UK","USA"]
     country_tree = build_tree(countries)
 
+    print("UK is in the list? ", country_tree.search("UK"))
+    print("Sweden is in the list? ", country_tree.search("Sweden"))
