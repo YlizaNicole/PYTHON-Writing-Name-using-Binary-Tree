@@ -18,11 +18,17 @@ class BinarySearchTreeNode:
                 self.right.add_child(data)
             else:
                 self.right = BinarySearchTreeNode(data)
+
     def find_min(self):
         if self.left:
             return self.left.find_min()
         else:
             return self.data
+        
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
 
 
 def build_tree(elements):
@@ -39,4 +45,5 @@ if __name__ == '__main__':
     name_tree = build_tree(Name)
 
 
-print("Found Min : ", name_tree.find_min())
+print("Min: ", name_tree.find_min())
+print("Max:",name_tree.find_max())
