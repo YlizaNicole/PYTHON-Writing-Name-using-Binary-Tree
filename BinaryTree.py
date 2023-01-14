@@ -41,7 +41,6 @@ class BinarySearchTreeNode:
 
 
 def build_tree(elements):
-    print("Building tree with these elements:",elements)
     root = BinarySearchTreeNode(elements[0])
 
     for i in range(1,len(elements)):
@@ -50,10 +49,13 @@ def build_tree(elements):
     return root
 
 if __name__ == '__main__':
-    FirstName = ["Y","L","I", "Z","A" ]
-    FirstName_tree = build_tree(FirstName)
+    FullName = ["Y","L","I", "Z","A", "N", "I", "C", "O", "L", "E", "S", "A","L", "A", "Z", "A", "R" ]
+    FullName_tree = build_tree(FullName)
+
+    print ("Enter the LETTER you want to find:")
 
     User_Input = input("")
     Uppercased = User_Input.upper()
-    print("in the list? ", FirstName_tree.search(Uppercased))
- 
+    print("in the list? ", FullName_tree.search(Uppercased))
+
+print ("Bye Bye")
