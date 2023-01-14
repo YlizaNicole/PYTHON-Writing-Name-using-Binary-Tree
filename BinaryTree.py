@@ -8,8 +8,7 @@ class BinarySearchTreeNode:
 
     def add_child(self, data):
         if data == self.data:
-            return # node already exist
-
+            return 
         if data < self.data:
             if self.left:
                 self.left.add_child(data)
@@ -38,17 +37,7 @@ class BinarySearchTreeNode:
             else:
                 return False
 
-    def in_order_traversal(self):
-        elements = []
-        if self.left:
-            elements += self.left.in_order_traversal()
 
-        elements.append(self.data)
-
-        if self.right:
-            elements += self.right.in_order_traversal()
-
-        return elements
 
 
 def build_tree(elements):
@@ -61,8 +50,10 @@ def build_tree(elements):
     return root
 
 if __name__ == '__main__':
-    countries = ["India","Pakistan","Germany", "USA","China","India","UK","USA"]
-    country_tree = build_tree(countries)
+    FirstName = ["Y","L","I", "Z","A" ]
+    FirstName_tree = build_tree(FirstName)
 
-    print("UK is in the list? ", country_tree.search("UK"))
-    print("Sweden is in the list? ", country_tree.search("Sweden"))
+    print("in the list? ", FirstName_tree.search("L"))
+    print("in the list? ", FirstName_tree.search("A"))
+    print("in the list? ", FirstName_tree.search("N"))
+    print("in the list? ", FirstName_tree.search(input("")))
