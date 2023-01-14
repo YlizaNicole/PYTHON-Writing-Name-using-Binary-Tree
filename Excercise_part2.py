@@ -9,7 +9,6 @@ class BinarySearchTreeNode:
             return
 
         if data < self.data:
-            # add data in left subtree
             if self.left:
                 self.left.add_child(data)
             else:
@@ -22,15 +21,10 @@ class BinarySearchTreeNode:
     
     def in_order_traversal(self):
         elements = []
-
-        #visit left tree
         if self.left:
             elements += self.left.in_order_traversal()
-
-        # visit base mode
         elements.append(self.data)
 
-        # visit right tree
         if self.right:
             elements += self.right.in_order_traversal()
 
@@ -77,7 +71,7 @@ class BinarySearchTreeNode:
             if self.right is None:
                 return self.left
 
-            # Use max value from left subtree
+
             max_val = self.left.find_max()
             self.data = max_val
             self.left = self.left.delete(max_val)
