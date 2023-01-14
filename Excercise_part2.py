@@ -98,6 +98,7 @@ if __name__ == '__main__':
     Name = ["Y","L","I", "Z","A", "N", "I", "C", "O", "L", "E", "R", "E", "Q", "U", "I", "L", "L", "A", "S", "S", "A","L", "A", "Z", "A", "R"]
     name_tree = build_tree(Name)
     deleting= input("input the deired letter to be deleted:")
-    uppercase = deleting.upper
+    uppercase = deleting.upper()
+    print (uppercase)
     name_tree.delete(uppercase)
     print("After deleteing the desired letter", name_tree.in_order_traversal())
