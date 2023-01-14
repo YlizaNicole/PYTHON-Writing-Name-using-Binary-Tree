@@ -38,6 +38,18 @@ class BinarySearchTreeNode:
             else:
                 return False
 
+    def in_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.in_order_traversal()
+
+        elements.append(self.data)
+
+        if self.right:
+            elements += self.right.in_order_traversal()
+
+        return elements
+
 
 def build_tree(elements):
     print("Building tree with these elements:",elements)
@@ -51,3 +63,4 @@ def build_tree(elements):
 if __name__ == '__main__':
     countries = ["India","Pakistan","Germany", "USA","China","India","UK","USA"]
     country_tree = build_tree(countries)
+
