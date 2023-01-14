@@ -52,5 +52,8 @@ def build_tree(elements):
 if __name__ == '__main__':
     FirstName = ["Y","L","I", "Z","A" ]
     FirstName_tree = build_tree(FirstName)
-    
-    print("in the list? ", FirstName_tree.search())
+
+    User_Input = input("")
+    Uppercased = User_Input.upper()
+    print("in the list? ", FirstName_tree.search(Uppercased))
+ 
